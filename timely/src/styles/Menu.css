@@ -1,0 +1,98 @@
+.salutation{
+    font-family: inter;
+    text-align: center;
+    font-weight: bold;
+    color:  black;
+    font-size: 1.2rem;
+}
+
+.Menu{
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+}
+
+.bule{
+    background-color: #efeeee;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.bule1{
+    display: flex;
+}
+
+.bule1 img{
+    height: 120px;
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 120px;
+}
+
+.bule1 p{
+    font-family: inter;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 80px;
+}
+
+.nombre{
+    text-align: right;
+    font-family: inter;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 70px;
+}
+
+.auday{
+    font-family: inter;
+    margin-top: 40px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.tableau{
+    margin-top: 30px;
+    font-family: inter;
+}
+.table{
+    
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+}
+
+.champ-name{
+    background-color: #efeeee;
+    color: #763C1B;
+    
+    
+
+}
+
+.champ-name th{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.data-table{
+    text-align: center;
+}
+
+.data-table td{
+    line-height: 2;
+}
+.plus{
+    color:  #763C1B;
+    font-family: inter;
+    font-weight: bold;
+    margin-left: 650px;
+    margin-top: -11px;
+    cursor: pointer;
+}
+
