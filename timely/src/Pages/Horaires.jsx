@@ -1,7 +1,7 @@
-import Banner from './Banner'
-import Board4 from './Board4'
+import Banner from '../components/Banner'
+import Board4 from '../components/Board4'
 import '../styles/Layout.css'
-import Present_Absent from './Present_Absent'
+import Present_Absent from '../components/Present_Absent'
 function Horaires(){
     return(
         <div>

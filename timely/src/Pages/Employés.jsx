@@ -1,8 +1,8 @@
 
-import Banner from './Banner'
-import Board2 from './Board2'
+import Banner from '../components/Banner'
+import Board2 from '../components/Board2'
 import '../styles/Layout.css'
-import DataEmployes from './DataEmployes'
+import DataEmployes from '../components/DataEmployes'
 
 function Employés(){
     return(

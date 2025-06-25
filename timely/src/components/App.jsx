@@ -1,13 +1,13 @@
 
 import React from 'react'
-import Employés from './Employés'
-import Planification from './Planification'
-import Authentification from './Authentification'
-import Accueil from './Accueil'
-import Pointage from './Pointage'
+import Employés from '../Pages/Employés'
+import Planification from '../Pages/Planification'
+import Authentification from '../Pages/Authentification'
+import Accueil from '../Pages/Accueil'
+import Pointage from '../Pages/Pointage'
 import Register from '../Pages/Register'
 import Wrapper from './Wrapper'
-import Horaires from './Horaires'
+import Horaires from '../Pages/Horaires'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
