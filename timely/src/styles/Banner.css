@@ -1,0 +1,30 @@
+.Banner{
+background-color: #763C1B;
+padding-left: 28px;
+display: flex;
+padding-bottom: 5px;
+padding-top: 8px;
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.title{
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    font-family: inter;
+}
+
+.signout{
+    border: none;
+    background-color: #763C1B;
+    color: white;
+    font-family: inter;
+    font-weight: bold;
+    margin-left: 1250px;
+    cursor: pointer;
+}

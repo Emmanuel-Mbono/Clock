@@ -1,0 +1,54 @@
+.dashbord{
+    background-color: #763C1B;
+    font-family: inter;
+    width: 200px;
+    
+
+}
+
+.board{
+    color:white;
+    background-color: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: inter;
+    padding-left: 15px;
+    font-weight: bold;
+    padding-right: 15px;
+    margin-top: 50px;
+    margin-left: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.but{
+    padding-left: 35px;
+    margin-top: 30px;
+    display: flex;
+    background-color: #763C1B;
+    border: none;
+    cursor: pointer;
+    color:white;
+    font-weight: bold;
+    font-family: inter;
+}
+.but p{
+    margin-left: 11px;
+}
+
+.logo-employes{
+    height: 30px;
+    width: 30px;
+    
+}
+.link{
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+}
+.link1{
+    text-decoration: none;
+    color: white;
+}

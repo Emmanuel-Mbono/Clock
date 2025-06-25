@@ -1,0 +1,84 @@
+.login{
+    width: 100%;
+    font-family: inter;
+}
+
+.title1{
+    font-family: inter;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.logo11{
+    width: 100%;
+}
+
+.logo1{
+    width: 30%;
+    display: flex;
+    margin: auto;
+    
+}
+.logo1 p{
+    font-weight: bold;
+    color: #763C1B;
+    font-size: 1.2rem;
+    margin-top: 40px;
+}
+
+.logo1 img{
+    width: 100px;
+    height: 100px;
+}
+
+.formulaire{
+    width: 40%;
+    justify-content: center;
+    margin: auto;
+    background-color:  #efeeee;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+   
+}
+
+.form1{
+    width: 100%;
+    
+}
+
+.form{
+    width: 100%;
+    margin-top: 20px;
+}
+.form input{
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    font-family: inter;
+    font-weight: bold;
+    background-color: white;
+    line-height: 2.6;
+    margin:20px;
+}
+
+.form button{
+    width: 90%;
+    margin-top: 20px;
+    border-radius: 15px;
+    line-height: 2.6;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: inter;
+    background-color:  #763C1B;
+}
+
+.compte{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
