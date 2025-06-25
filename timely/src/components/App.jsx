@@ -5,7 +5,7 @@ import Planification from './Planification'
 import Authentification from './Authentification'
 import Accueil from './Accueil'
 import Pointage from './Pointage'
-import Register from './Register'
+import Register from '../Pages/Register'
 import Wrapper from './Wrapper'
 import Horaires from './Horaires'
 import {BrowserRouter, Routes, Route} from "react-router-dom"

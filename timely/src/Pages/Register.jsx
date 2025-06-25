@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import horaire1 from '../assets/horaire1.png'
-import supabase from './supabaseClient'
+import supabase from '../components/supabaseClient'
 import { Link } from "react-router"
 function Register(){
     const [email, setEmail]= useState("")

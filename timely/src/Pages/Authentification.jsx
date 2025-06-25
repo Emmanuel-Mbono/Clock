@@ -3,7 +3,7 @@ import '../styles/Authentification.css'
 import {Link, useNavigate} from "react-router-dom"
 import React from 'react'
 import { useState } from 'react'
-import supabase from './supabaseClient'
+import supabase from '../components/supabaseClient'
 
 function Authentification(){
     const navigate= useNavigate()
