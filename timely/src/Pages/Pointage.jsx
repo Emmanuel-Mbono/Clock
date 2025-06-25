@@ -1,7 +1,7 @@
-import Banner from './Banner'
-import Board1 from './Board1'
+import Banner from '../components/Banner'
+import Board1 from '../components/Board1'
 import '../styles/Layout.css'
-import DataPointage from './DataPointage'
+import DataPointage from '../components/DataPointage'
 function Pointage(){
     return(
         <div>
