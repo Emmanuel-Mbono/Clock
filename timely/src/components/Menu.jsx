@@ -112,7 +112,7 @@ function Menu(){
             <div className='Menu'>
                 
                 <div  className='bule'>
-                  <Link to="/Horaires" style={{textDecoration: 'none', color : 'black'}}>
+                  <Link to="/Employés" style={{textDecoration: 'none', color : 'black'}}>
                       <div className='bule1'>
                           <img src={employes} alt='logo-employes'/>
                           <p>Employés</p>
