@@ -67,7 +67,7 @@ function DataEmployes(){
     const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(blob, 'Employés.xlsx');
   };
-
+  
 
     if (loading) return <p>Chargement des données...</p>;
 
