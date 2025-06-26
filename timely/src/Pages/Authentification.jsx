@@ -39,7 +39,7 @@ function Authentification(){
            <div className='login'>
                <p className='title1'>Login</p>
                <br></br>
-               {message && <span>{message}</span>}
+               {message && <span style={{fontFamily:'inter'}}>{message}</span>}
                <div className='formulaire'>
                    <div className='logo11'>
                        <div className='logo1'>
