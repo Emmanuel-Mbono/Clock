@@ -103,11 +103,11 @@ function StatistiquesAdditionnelles({ userData, runData }) {
   return (
     <div style={{ marginTop: '40px' , fontFamily:'inter', width:'100%'}}>
       <div style={{display:'flex', width:'100%'}}>
-        <div style={{width:'40%', backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', margin:'15px'}}>
+        <div style={{width:'40%', backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', margin:'15px', boxShadow:' 5px 5px 10px rgba(0, 0, 0, 0.5)'}}>
           <h3>5. Présence par genre (aujourd'hui)</h3>
           <Pie data={genreData} />
         </div>
-        <div style={{width:'60%', backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', margin:'15px'}}>
+        <div style={{width:'60%', backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', margin:'15px', boxShadow:' 5px 5px 10px rgba(0, 0, 0, 0.5)'}}>
           <h3 style={{ }}>6. Fréquence des pointages (aujourd'hui)</h3>
           <Bar data={hourData} />
         </div>
