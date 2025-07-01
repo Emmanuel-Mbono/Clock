@@ -146,11 +146,11 @@ function Statistiques(){
 
         <div>
             <div style={{display: 'flex'}}>
-                <div style={{ marginBottom: '40px' , margin:'15px',  width:'40%' , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter'}}>
+                <div style={{ marginBottom: '40px' , margin:'15px',  width:'40%' , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', boxShadow:' 5px 5px 10px rgba(0, 0, 0, 0.5)'}}>
                     <h3>1. Répartition Présents / Absents aujourd’hui</h3>
                     <Pie data={pieData} />
                 </div>
-                <div style={{ marginBottom: '40px' , margin:'15px',  width:'60%' , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter' }}>
+                <div style={{ marginBottom: '40px' , margin:'15px',  width:'60%' , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', boxShadow:' 5px 5px 10px rgba(0, 0, 0, 0.5)' }}>
                     <h3>2. Taux de présence sur plusieurs jours</h3>
                     <div style={{ marginBottom: '40px' }}>
                         <label>Choisir la période : </label>
@@ -166,12 +166,12 @@ function Statistiques(){
         </div>
 
         <div  style={{display: 'flex'}}>
-            <div style={{ marginBottom: '40px' , margin:'15px',  width:'40%'  , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter'}}>
+            <div style={{ marginBottom: '40px' , margin:'15px',  width:'40%'  , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', boxShadow:' 5px 5px 10px rgba(0, 0, 0, 0.5)'}}>
                 <h3>3. Top 5 des absents</h3>
                 <Bar data={barDataAbsents} options={{ indexAxis: 'y' }} />
             </div>
 
-            <div style={{ marginBottom: '40px', margin:'15px', width:'60%' , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter' }}>
+            <div style={{ marginBottom: '40px', margin:'15px', width:'60%' , backgroundColor:' #efeeee', borderRadius:'30px', fontFamily:'inter', boxShadow:' 5px 5px 10px rgba(0, 0, 0, 0.5)' }}>
                 <h3>4. Présence par titre (aujourd’hui)</h3>
                 <Bar data={barTitleData} />
             </div>
