@@ -79,9 +79,9 @@ function DataPointage(){
   const minute = actual.getMinutes();
 
   if (heure > 8 || (heure === 8 && minute > 0)) {
-    return 'Retard';
+    return 'Retard ❌';
   } else {
-    return 'A l\'heure';
+    return 'A l\'heure ✅';
   }
 };
 
