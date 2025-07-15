@@ -60,6 +60,8 @@ function DataPointage(){
       Titre: p.USERINFO?.TITLE || '',
       StartDate: p.STARTDATE,
       EndDate: p.ENDDATE,
+      Statut: calcStatut(p.STARTDATE),
+      Heure_sup: calcHeureSup(p.ENDDATE)
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(exportData);
@@ -70,6 +72,32 @@ function DataPointage(){
     const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(blob, 'pointage.xlsx');
   };
+
+  const calcStatut = (startdate) => {
+  const actual = new Date(startdate);
+  const heure = actual.getHours();
+  const minute = actual.getMinutes();
+
+  if (heure > 8 || (heure === 8 && minute > 0)) {
+    return 'Retard';
+  } else {
+    return 'A l\'heure';
+  }
+};
+
+  const calcHeureSup = (enddate) => {
+    const actual = new Date(enddate);
+    const heure = actual.getHours();
+    const minute = actual.getMinutes();
+
+    const heureActuelle = heure + (minute / 60);
+    const heureNormale = 16.5;
+
+    const diff = heureActuelle - heureNormale;
+
+    return diff.toFixed(2); // exemple : +0.25h ou -0.50h
+  };
+
 
 
 
@@ -100,6 +128,8 @@ function DataPointage(){
                             <th style={{paddingRight:'60px', paddingLeft:'60px'}}>Titre</th>
                             <th style={{paddingRight:'60px', paddingLeft:'60px'}}>Heure d'arrivée</th>
                             <th style={{paddingRight:'60px', paddingLeft:'60px'}}>Heure de départ</th>
+                            <th style={{paddingRight:'60px', paddingLeft:'60px'}}>Statut</th>
+                            <th style={{paddingRight:'60px', paddingLeft:'60px'}}>Heure sup</th>
                         </tr>
                     </thead>
                     <tbody className='data-table'>
@@ -110,6 +140,8 @@ function DataPointage(){
                             <td>{p.USERINFO?.TITLE || '—'}</td>
                             <td>{p.STARTDATE}</td>
                             <td>{p.ENDDATE}</td>
+                            <td style={{ color: calcStatut(p.STARTDATE) === 'Retard' ? 'red' : 'green' }}>{calcStatut(p.STARTDATE)}</td>
+                            <td style={{ color: calcHeureSup(p.ENDDATE) < 0 ? 'red' : 'green' }}>{calcHeureSup(p.ENDDATE)} h</td>
                         </tr>
                     ))}
                     </tbody>
