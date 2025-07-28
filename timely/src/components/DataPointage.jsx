@@ -52,26 +52,39 @@ function DataPointage(){
   );
 });
 
+
  // ✅ Fonction d’exportation
   const exportToExcel = () => {
-    const exportData = filteredPointages.map((p) => ({
-      UserID: p.USERID,
-      Nom: p.USERINFO?.Name || '',
-      Titre: p.USERINFO?.TITLE || '',
-      StartDate: p.STARTDATE,
-      EndDate: p.ENDDATE,
-      Statut: calcStatut(p.STARTDATE),
-      Heure_sup: calcHeureSup(p.ENDDATE)
-    }));
+    try {
+      const exportData = filteredPointages.map((p) => ({
+        UserID: p.USERID,
+        Nom: p.USERINFO?.Name || '',
+        Titre: p.USERINFO?.TITLE || '',
+        StartDate: p.STARTDATE,
+        EndDate: p.ENDDATE,
+        Statut: calcStatut(p.STARTDATE),
+        Heure_sup: calcHeureSup(p.ENDDATE, p.STARTDATE)
+      }));
 
-    const worksheet = XLSX.utils.json_to_sheet(exportData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'USER_OF_RUN');
+      if (exportData.length === 0) {
+        alert("Aucune donnée à exporter !");
+        return;
+      }
 
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(blob, 'pointage.xlsx');
+      const worksheet = XLSX.utils.json_to_sheet(exportData);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'USER_OF_RUN');
+
+      const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+      const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+      saveAs(blob, 'pointage.xlsx');
+
+    } catch (error) {
+      console.error("Erreur lors de l'exportation :", error);
+      alert("Erreur lors de l'exportation !");
+    }
   };
+
 
   const calcStatut = (startdate) => {
   const actual = new Date(startdate);
