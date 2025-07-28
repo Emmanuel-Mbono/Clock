@@ -95,7 +95,7 @@ function DataPointage(){
 
     const heureActuellefin = heure + (minute / 60);
     const heureActuelledebut= heure1 + (minute1 /60)
-    const heureNormaleTravail = 16.5 -7.5;
+    const heureNormaleTravail = 16.5 -8;
 
     const diff = (heureActuellefin - heureActuelledebut) - heureNormaleTravail;
 
