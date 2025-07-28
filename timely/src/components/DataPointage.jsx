@@ -85,15 +85,19 @@ function DataPointage(){
   }
 };
 
-  const calcHeureSup = (enddate) => {
+  const calcHeureSup = (enddate, startdate ) => {
     const actual = new Date(enddate);
+    const start = new Date(startdate);
     const heure = actual.getHours();
     const minute = actual.getMinutes();
+    const heure1= start.getHours();
+    const minute1= start.getHours()
 
-    const heureActuelle = heure + (minute / 60);
-    const heureNormale = 16.5;
+    const heureActuellefin = heure + (minute / 60);
+    const heureActuelledebut= heure1 + (minute1 /60)
+    const heureNormaleTravail = 16.5 -7.5;
 
-    const diff = heureActuelle - heureNormale;
+    const diff = (heureActuellefin - heureActuelledebut) - heureNormaleTravail;
 
     return diff.toFixed(2); // exemple : +0.25h ou -0.50h
   };
@@ -141,7 +145,7 @@ function DataPointage(){
                             <td>{p.STARTDATE}</td>
                             <td>{p.ENDDATE}</td>
                             <td style={{ color: calcStatut(p.STARTDATE) === 'Retard' ? 'red' : 'green' }}>{calcStatut(p.STARTDATE)}</td>
-                            <td style={{ color: calcHeureSup(p.ENDDATE) < 0 ? 'red' : 'green' }}>{calcHeureSup(p.ENDDATE)} h</td>
+                            <td style={{ color: (calcHeureSup(p.ENDDATE, p.STARTDATE) < 0)? 'red' : 'green' }}>{calcHeureSup(p.ENDDATE, p.STARTDATE)} h</td>
                         </tr>
                     ))}
                     </tbody>
